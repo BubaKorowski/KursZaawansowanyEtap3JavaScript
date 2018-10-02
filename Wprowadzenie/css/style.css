@@ -1,0 +1,39 @@
+span {
+  font-weight: bold;
+}
+body {
+  height: 100vh;
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.sekcja1 {
+  background-color: red;
+  height: 70vh;
+}
+.sekcja2 {
+  background-color: blue;
+  height: 500px;
+}
+.sekcja3 {
+  background-color: yellowgreen;
+  height: 1290px;
+}
+.sekcja4 {
+  background-color: darkgoldenrod;
+  height: 120vh;
+}
+.info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  background-color: rgb(200, 200, 200);
+  line-height: 70px;
+}
