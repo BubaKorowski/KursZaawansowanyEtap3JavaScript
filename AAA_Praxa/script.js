@@ -42,7 +42,7 @@ function changeText() {
   const wysokoscSekcji1 = document.querySelector(".sekcja1").clientHeight;
   const wysokoscSekcji2 = document.querySelector(".sekcja2").clientHeight;
   const wysokoscSekcji3 = document.querySelector(".sekcja3").clientHeight;
-  const wysokoscSekcji4 = document.querySelector(".sekcja4").clientHeight;
+  // const wysokoscSekcji4 = document.querySelector(".sekcja4").clientHeight;
   //   console.log(wysokoscSekcji4);
 
   const odlegloscOdPoczatkuSekcji1 = document.querySelector(".sekcja1")
