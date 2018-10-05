@@ -60,7 +60,7 @@ true && false;
 "2" + 3 * 5;
 
 //OPERATOR WARUNKOWY (trujargumentowy)
-//warunek? zrobToJesliPrawda : zrobToJesliFalsz
+//warunek ? zrobToJesliPrawda : zrobToJesliFalsz
 2 > 2 ? "tak" : "nie"
 
 //Literały oraz właściwości i metody typów prostych
