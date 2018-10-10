@@ -118,23 +118,23 @@
 // showUserName("piotr", 200);
 // showUserName.length; // pokazuje ilu argumentów oczekuje dana funkcja(czyli ile paramatrów posiada w momencie jej tworzenia)
 
-// WARTOŚCI DOMYŚLNE W ES6
+// WARTOŚCI DOMYŚLNE W FUNKCJI ES6
 
 // jeśli nie podamy argumentów na etapie wywołania funkcji to funkcja weźmie argumentu domyślne
 
-// const addTwoNumbers = (x = 2, y = 3) => {
+// const addTwoNumbers = (x, y) => {
 //   const result = x + y;
 //   console.log(result);
-//   return result;
-// }
+//   return x + y;
+// };
 
 // Deklaracja funkcji (poniżej to samo co powyżej, ale inny sposób tworzenia)
 
-// const addTwoNumbers2 = function (x = 0, y = 3) {
+// const addTwoNumbers2 = function(x = 0, y = 3) {
 //   const result = x + y;
 //   console.log(result);
 //   return result;
-// }
+// };
 
 // CALLBACK
 // Jest to funkcja wywołania zwrotnego, czyli funkcja przekazana jako argument do funkcji i wywołana w niej
@@ -142,8 +142,8 @@
 
 //1. Przykład CALLBACK
 
-// function count(x, callback) {
-//   return callback(x)
+// function count(x, callback, callback) {
+//   return callback(x);
 // }
 
 // function addOne(number) {
@@ -152,19 +152,27 @@
 //   return number;
 // }
 
-
-// function subtractOne(number) {
-//   number--;
+// function subtractFour(number) {
+//   number -= 4;
 //   console.log(number);
 //   return number;
 // }
-// const result = count(4, addOne)
+// const result = count(4, addOne, subtractFour);
 
 // 2. Przykład CALLBACK
 
-// document.body.addEventListener("click", function () {
-//   console.log("klikinąłeś")
-// })
+//funkcja anonimowa
+
+document.body.addEventListener("click", function() {
+  console.log("kliknąłeś");
+});
+
+//funkcja nazwana
+
+// function klik() {
+//   console.log("kliknięcie");
+// }
+// document.body.addEventListener("click", klik);
 
 // 3. Przykład CALLBACK
 
@@ -191,23 +199,23 @@ const usersAge = [20, 30, 40, 50, 60, 70, 80];
 
 // ARGUMENTS - obiekt ARGUMENTS zawiera aktualną listę argumentów przekazanych do tablicy. (podobny do tablicy)
 
-const showArguments = function () {
-  console.log(arguments) //arguments - nazwa dla obiektu (nazwa przypisana)
-  console.log(arguments.length) //długość - ile argumentów przekazaliśmy
-  console.log(arguments[0]) //odwołanie do konkretnego argumentu
-  console.log(typeof arguments) //obiekt (tablico-podobny). Ma właściwość length, można odwołać się za pomocą notacji tablicowej np. arguments[2]. Nie ma metod znanych z tablicy
-}
+const showArguments = function() {
+  console.log(arguments); //arguments - nazwa dla obiektu (nazwa przypisana)
+  console.log(arguments.length); //długość - ile argumentów przekazaliśmy
+  console.log(arguments[0]); //odwołanie do konkretnego argumentu
+  console.log(typeof arguments); //obiekt (tablico-podobny). Ma właściwość length, można odwołać się za pomocą notacji tablicowej np. arguments[2]. Nie ma metod znanych z tablicy
+};
 
 // showArguments("5", null, {})
 
 //wykorzystanie w praktyce
 
-const addAllNumbers = function () {
+const addAllNumbers = function() {
   let result = 0;
   for (let i = 0; i < arguments.length; i++) {
     result += arguments[i];
   }
   return result;
-}
+};
 
 const usersMoney = addAllNumbers(2, 2, 2);
