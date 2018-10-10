@@ -126,16 +126,16 @@
 
 //PĘTLA FOR - OF (ES6)
 
-const colors = [
-  "red",
-  "green",
-  "black",
-  "yellow",
-  "white",
-  "gold",
-  "siver",
-  "brown"
-];
-for (const color of colors) {
-  console.log(color);
-}
+// const colors = [
+//   "red",
+//   "green",
+//   "black",
+//   "yellow",
+//   "white",
+//   "gold",
+//   "siver",
+//   "brown"
+// ];
+// for (const color of colors) {
+//   console.log(color);
+// }
