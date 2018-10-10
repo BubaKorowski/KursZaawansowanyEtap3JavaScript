@@ -93,13 +93,13 @@
 // }
 
 // obliczamy wiek użtkownika
-// const userBirthDate = [2000, 1980, 1600, 1948, 1932];
-// const currentYear = 2018;
+const userBirthDate = [2000, 1980, 1600, 1948, 1932];
+const currentYear = 2018;
 
-// for (let i = 0; i < userBirthDate.length; i++) {
-//   const userAge = currentYear - userBirthDate[i];
-//   console.log(`wiek użytkownika z numerem index ${i} wynosi ${userAge}`);
-// }
+for (let i = 0; i < userBirthDate.length; i++) {
+  const userAge = currentYear - userBirthDate[i];
+  console.log(`wiek użytkownika z numerem index ${i} wynosi ${userAge}`);
+}
 
 // for + instrukcja warunkowa alert
 
