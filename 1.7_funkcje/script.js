@@ -142,7 +142,7 @@
 
 //1. Przykład CALLBACK
 
-// function count(x, callback, callback) {
+// function count(x, callback) {
 //   return callback(x);
 // }
 
@@ -181,15 +181,15 @@ document.body.addEventListener("click", function() {
 //albo
 
 // const showTime = () => {
-//   console.log("minęła 1 sekunda")
-// }
-// setInterval(showTime, 1000)
+//   console.log("minęła 1 sekunda");
+// };
+// setInterval(showTime, 1000);
 
 // 3. Przykład CALLBACK
 
 const usersAge = [20, 30, 40, 50, 60, 70, 80];
 
-// usersAge.forEach(userAge => console.log(`Wiek użytkownika to ${userAge}`))
+// usersAge.forEach(userAge => console.log(`Wiek użytkownika to ${userAge}`));
 
 //albo
 
@@ -202,11 +202,11 @@ const usersAge = [20, 30, 40, 50, 60, 70, 80];
 const showArguments = function() {
   console.log(arguments); //arguments - nazwa dla obiektu (nazwa przypisana)
   console.log(arguments.length); //długość - ile argumentów przekazaliśmy
-  console.log(arguments[0]); //odwołanie do konkretnego argumentu
+  console.log(arguments[2]); //odwołanie do konkretnego argumentu
   console.log(typeof arguments); //obiekt (tablico-podobny). Ma właściwość length, można odwołać się za pomocą notacji tablicowej np. arguments[2]. Nie ma metod znanych z tablicy
 };
 
-// showArguments("5", null, {})
+// showArguments("5", null, {});
 
 //wykorzystanie w praktyce
 
@@ -218,4 +218,83 @@ const addAllNumbers = function() {
   return result;
 };
 
-const usersMoney = addAllNumbers(2, 2, 2);
+// const usersMoney = addAllNumbers(2, 2, 2);
+// console.log(usersMoney);
+
+//Jak funkcja zachowuje się przy różnych argumentach
+
+function showInfoAboutUsers(age, name, sex) {
+  if (arguments.length === 0) {
+    console.log("Nie mam żadnych informacji");
+  } else if (arguments.length === 1) {
+    console.log(
+      "Wiek użytkownika to " + age + " lat. Dalszych informacji brak"
+    );
+  } else if (arguments.length === 2) {
+    console.log(
+      "Wiek użytkownika to " + age + " lat a imię jego " + name + "."
+    );
+  } else {
+    console.log(`Użytkownik ma ${age} i ma na imię ${name} i jest ${sex}`);
+  }
+}
+
+// Operator REST (ES6) umieszcza dowolną ilość podanych argumentów w jednej tablicy.
+// (...nazwa) nazwa jest dowolna, zgodna z zasadami nazywania zmiennych
+// zwraca tablicę. (arguments nie jest jednak taclicą)
+
+function showAllArguments(...items) {
+  console.log(items);
+  console.log(arguments);
+  return items;
+}
+
+// showAllArguments("aaa", 2, 33, "adda", null, {}, false);
+
+//z wykożystaniem pętli
+
+function addAllWords(...words) {
+  let txt = "";
+  for (let i = 0; i < words.length; i++) {
+    txt += `${words[i]}. `;
+    console.log(txt);
+  }
+
+  // words.forEach(function(word) {
+  //   txt += word + ". ";
+  //   console.log(txt);
+  // });
+  console.log(txt);
+}
+addAllWords("name", "songo", 2, 33.4, "Beatrycze");
+
+//dzięki operatorowi REST możemy zbierać pozostałe argumenty (które nie zostały umieszczone poza parametrami)
+
+function showUsers(owner, ...others) {
+  console.log(
+    `Na party był ${owner} ${others.length ? "oraz " + others + "." : "."}`
+  );
+}
+
+showUsers("Adrian");
+showUsers("Adrian", "Jadzia", "Stach", "Boby");
+
+// METODY A FUNKCJE
+//metody to funkcje umieszczone w obiektach
+
+const objectExample = {
+  showName: function() {
+    console.log("Ala");
+  },
+  showAge() {
+    console.log(30);
+  }
+};
+
+objectExample.showAge();
+objectExample.showName();
+
+const showName = function() {
+  console.log("Janek");
+};
+showName();
