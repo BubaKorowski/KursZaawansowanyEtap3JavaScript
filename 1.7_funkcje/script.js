@@ -12,12 +12,12 @@
 
 // const nazwaFunkcjiCoRobi = function() {};
 
-// const showMessage = function(message) {
-//   console.log(message);
-// };
-// showMessage("Pokazuje wiadomość");
+const showMessage = function(message) {
+  console.log(message);
+};
+showMessage("Pokazuję wiadomość");
 
-// 2. DEKLARACJA FUNKCJI - ajpierw słowo kluczowe function a potem nazwa. Function Declaration.
+// 2. DEKLARACJA FUNKCJI - ndeviajpierw słowo kluczowe function a potem nazwa. Function Declaration.
 
 // function addNumber(number1, number2) {
 //   return number1 + number2;
@@ -107,11 +107,13 @@ const showUserName = function(userName) {
   console.log(userName);
 };
 
-//Argument - pojęcie użyte przy wywołaniu funkcji 
+//Argument - pojęcie użyte przy wywołaniu funkcji
 showUserName("Izabella");
 
 //W funnkcji powyżej tworząc funkcję ustawiamy jede n parametr. Przy wywołaniu  miejsce parametru podajemy argument, który pełni rolę wartości dla parametru.
 
 //Jeśli nie podamy argumentu to w jego miejsce zostanie wstawione undefined
 
-//Jeśli podamy więcej argumentów niż
+//Jeśli podamy więcej argumentów niż parametrów to nie spowoduje to błędu
+showUserName("piotr", 200);
+showUserName.length; // pokazuje ilu argumentów oczekuje dana funkcja(czyli ile paramatrów posiada w momencie jej tworzenia)

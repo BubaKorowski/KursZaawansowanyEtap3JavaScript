@@ -126,6 +126,7 @@ for (let i = 0; i < userBirthDate.length; i++) {
 
 //PĘTLA FOR - OF (ES6)
 
+<<<<<<< HEAD
 const colors = [
   "red",
   "green",
@@ -139,3 +140,18 @@ const colors = [
 for (const color of colors) {
   console.log(color);
 }
+=======
+// const colors = [
+//   "red",
+//   "green",
+//   "black",
+//   "yellow",
+//   "white",
+//   "gold",
+//   "siver",
+//   "brown"
+// ];
+// for (const color of colors) {
+//   console.log(color);
+// }
+>>>>>>> 62df29d5b1c32fe5934b961b30bbb0fca41fda23
