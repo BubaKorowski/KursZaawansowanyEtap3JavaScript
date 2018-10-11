@@ -12,24 +12,24 @@
 
 // const nazwaFunkcjiCoRobi = function() {};
 
-// const showMessage = function (message) {
-//   console.log(message);
-// };
-// showMessage("Pokazuję wiadomość");
+const showMessage = function(message) {
+  console.log(message);
+};
+showMessage("Pokazuję wiadomość");
 
-// 2. DEKLARACJA FUNKCJI - ndeviajpierw słowo kluczowe function a potem nazwa. Function Declaration.
+// 2. DEKLARACJA FUNKCJI - najajpierw słowo kluczowe function a potem nazwa. Function Declaration.
 
-// function addNumber(number1, number2) {
-//   return number1 + number2;
-// }
-// addNumber(2, 4);
+function addNumber(number1, number2) {
+  return number1 + number2;
+}
+addNumber(2, 4);
 
 // showCourseName(); //wywołanie funkji przed jej deklaracją dzięki hoistingowi.
 
-// function showCourseName() {
-//   console.log("JS Programing");
-// }
-// showCourseName();
+function showCourseName() {
+  console.log("JS Programing");
+}
+showCourseName();
 
 // 3. KONSTRUKOR (Function Constructor)
 
