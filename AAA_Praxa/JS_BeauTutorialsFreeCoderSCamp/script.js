@@ -1,15 +1,16 @@
-// const showConsoleLog = function(mesage) {
-//   true && false ? console.log(mesage) : console.log("fałsz");
-// };
-// showConsoleLog("prawda");
+const showConsoleLog = function(message) {
+  true && true ? console.log(message) : console.log("fałsz");
+};
+showConsoleLog("prawda");
 
+console.log("------------------------------------------");
 // //s
 
-// function dodaj(x, y) {
-//   return x + y;
-// }
-// const wynik = dodaj(2, 3);
-// console.log("wynik to " + wynik);
+function dodaj(x, y) {
+  return x + y;
+}
+const wynik = dodaj(2, 3);
+console.log("wynik to " + wynik);
 
 //JS data type
 //boolean
@@ -85,14 +86,14 @@ myName += " Borowski";
 //Strinngs: [Brackets Notation]
 
 var firstName = "Jakub";
-console.log(firstName[0]);
-console.log(firstName[1]);
-console.log(firstName[2]);
-console.log(firstName[3]);
-console.log(firstName[4]);
-firstName = "Line brake";
-console.log(firstName[0]);
-console.log(firstName);
+// console.log(firstName[0]);
+// console.log(firstName[1]);
+// console.log(firstName[2]);
+// console.log(firstName[3]);
+// console.log(firstName[4]);
+// firstName = "Line brake";
+// console.log(firstName[0]);
+// console.log(firstName);
 
 // 20 STRING METHODS
 
@@ -102,7 +103,7 @@ var stringTwo = "Frontend and Backend development";
 // charAt()
 console.log(stringOne.charAt(1));
 
-// chareCodeAt()
+// charCodeAt()  (return unicode)
 console.log(stringOne.charCodeAt(1));
 
 //concat
@@ -124,7 +125,7 @@ console.log(stringOne.indexOf("live"));
 console.log(stringOne.lastIndexOf("live"));
 
 //match()
-console.log(stringOne.match(/live/g)); //why /g is used
+console.log(stringOne.match(/live/g)); //why /g is used??
 
 //repeat()
 console.log(stringOne.repeat(2));
@@ -188,13 +189,12 @@ function addSquares(a, b) {
 }
 
 console.log(addSquares(2, 3));
-
-// HOISTING
-
+const usersNames = ["Jakub", "aa", "bb", "cc"];
 const birthDate = [1983, 1900, 1863, 1945];
 curentDate = 2018;
 for (i = 0; i < birthDate.length; i++) {
   console.log(
-    `Wiek użytkownika o numerze ${i + 1} to ` + (curentDate - birthDate[i])
+    `Wiek użytkownika imieniem ${usersNames[i]} to ` +
+      (curentDate - birthDate[i])
   );
 }
