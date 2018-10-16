@@ -124,7 +124,7 @@ for (let i = 0; i < userBirthDate.length; i++) {
 //   }
 // }
 
-//PĘTLA FOR - OF (ES6)
+//PĘTLA FOR - OF (ES6) !!! WYMAGA DOCZYTANIA !!!
 
 const colors = [
   "red",

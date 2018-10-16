@@ -1,0 +1,12 @@
+div {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  background-color: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body {
+  height: 1000vh;
+}

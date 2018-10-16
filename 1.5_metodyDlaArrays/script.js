@@ -67,7 +67,7 @@ const italianUsers = [
 const items = ["zad", "buff", "lan", "sss", "Zzz", "vvc", "grt"];
 // console.log(items);
 
-//tnie od elementu z indexem 3
+//tnie od elementu z indexem 3 włącznie.
 items.slice(3);
 
 //tnie od elementu z indexem 3 i kończy na 4 index ale go nie uwzględnia

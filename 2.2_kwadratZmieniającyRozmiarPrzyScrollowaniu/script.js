@@ -7,7 +7,7 @@ sqr.style.height = size + "px";
 sqr.style.width = size + "px";
 
 window.addEventListener("scroll", function() {
-  if (size >= this.window.innerWidth / 2) {
+  if (size >= this.window.innerWidth / 1.5) {
     grow = !grow;
   } else if (size < 100) {
     grow = !grow;
