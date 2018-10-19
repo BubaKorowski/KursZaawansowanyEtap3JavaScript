@@ -1,9 +1,10 @@
-const a = 1;
-const b = 2;
-let c;
+//  Factorial function
 
-function sum() {
-  c = a + b;
-}
-
-sum()
+var factorial = function(number) {
+  if (number <= 0) {
+    return 1;
+  } else {
+    return number * factorial(number - 1);
+  }
+};
+console.log(factorial(6));
