@@ -3,7 +3,7 @@ const passwords = ["JedEn", "DwA"];
 const messages = ["super", "działa"];
 const div = document.querySelector(".message");
 
-//    PIERWSZE ROZWIĄZANIE
+//    PIERWSZE ROZWIĄZANIE (moje)
 
 // const showMessage = e => {
 //   const text = e.target.value.toLowerCase();

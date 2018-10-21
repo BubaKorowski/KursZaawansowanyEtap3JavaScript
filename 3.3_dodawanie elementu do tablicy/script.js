@@ -1,5 +1,6 @@
 const names = [];
 const div = document.querySelector("div");
+
 const addName = e => {
   e.preventDefault();
   const input = document.querySelector("input");
