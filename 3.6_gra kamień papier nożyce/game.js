@@ -12,21 +12,21 @@ const game = {
 };
 const hands = [...document.querySelectorAll(".select img")];
 
-//  Pierwsza funkcja
-
+//  WYBÓR GRACZA
 function handSelection() {
-  //   console.log(this.dataset);
   game.playerHand = this.dataset.option;
-  //   console.log(game.playerHand);
   hands.forEach(hand => (hand.style.boxShadow = ""));
   this.style.boxShadow = "0 0 0 4px blue";
 }
 
+//  WYBÓR KOMPUTERA
+
 function aiChoice() {
   const aiHand = hands[Math.floor(Math.random() * 3)].dataset.option;
-  //   console.log(aiHand);
   return aiHand;
 }
+
+//  SPRAWDZENIE WYNIKU
 
 function checkResult(player, ai) {
   if (player === ai) {
@@ -65,7 +65,7 @@ function endGame() {
     "";
 }
 
-//  Funkcja sterująca
+//  FUNKCJA STERUJĄCA
 
 function startGame() {
   if (!game.playerHand) {
