@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: arial;
+}
+/* Nav section */
+.burger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  z-index: 100;
+  transition: 0.4s;
+}
+aside {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: 0.4s;
+  animation: navSlide 0.1s ease linear;
+}
+@keyframes navSlide {
+  0% {
+    left: -100%;
+  }
+  10% {
+    left: 0;
+  }
+  15% {
+    left: 1%;
+  }
+  20% {
+    left: -1%;
+  }
+  25% {
+    left: 0%;
+  }
+  30% {
+    left: 0;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.burger.active {
+  transform: rotate(405deg);
+}
+.fas {
+  display: none;
+}
+i.show {
+  display: block;
+}
+aside.show {
+  left: 0;
+  animation: navSlide 2s linear;
+}
+
+nav {
+  background-color: red;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
+}
+ul {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-content: space-around;
+  margin: 0 50px 0 0;
+  line-height: 50px;
+}
+ul li {
+  list-style: none;
+  flex-basis: 20%;
+}
+ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+ul li a:hover {
+  background-color: darkred;
+}
+
+/* Container */
+.page-container {
+  margin-top: 50px;
+}
+
+/* Gallery section */
+section.gallery {
+  display: flex;
+  flex-direction: column;
+}
+section.gallery h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 20vh;
+  font-size: 40px;
+  margin: 20px 0;
+}
+div.galleryImages {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+div.galleryImages > div {
+  flex-basis: 33%;
+  /* margin: 5px 0; */
+}
+section div.galleryImages div img {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+@media (max-width: 960px) {
+  div.galleryImages > div {
+    flex-basis: 45%;
+    /* padding: 5px; */
+  }
+  section div.galleryImages div img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-content: space-around;
+    margin: 0 50px 0 0;
+    height: 10vh;
+  }
+  ul li {
+    list-style: none;
+    flex-basis: 20%;
+  }
+  ul li a {
+    display: block;
+    text-decoration: none;
+    line-height: 10vh;
+    text-align: center;
+    color: white;
+  }
+  div.galleryImages > div {
+    flex-basis: 100%;
+    padding: 5px;
+  }
+}
+.home{
+    background-image: url(ZaawansowanyEtap3JavaScript\AAA_Praxa\Moje storny\Projekt pierwszy\img)
+}
+

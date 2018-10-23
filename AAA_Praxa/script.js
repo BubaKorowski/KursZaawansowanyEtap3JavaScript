@@ -1,10 +1,13 @@
-//  Factorial function
+const spnTxt = document.querySelector("span");
+const txt = "setInterval(addLeter, time)";
 
-var factorial = function(number) {
-  if (number <= 0) {
-    return 1;
-  } else {
-    return number * factorial(number - 1);
-  }
+let time = 40;
+let index = 0;
+
+const addText = () => {
+  spnTxt.textContent += txt[index];
+  index++;
+  if (index === txt.length) clearInterval(interval);
 };
-console.log(factorial(6));
+
+const interval = setInterval(addText, time);
