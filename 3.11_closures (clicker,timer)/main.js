@@ -19,6 +19,8 @@ function x() {
 const example = x();
 example();
 
+//  LICZNIK KLIKNIĘĆ - CLOSURE
+
 const add = (start = 0) => {
   let number = start;
   return () => {
@@ -31,7 +33,7 @@ const counter = add();
 const counterFrom5 = add(5);
 document.addEventListener("click", counterFrom5);
 
-//
+//  OPERATOR TRÓJARGUMENTOWY I CLOSURE
 
 const user = (name = "", age) => {
   let userName = name;
@@ -54,3 +56,19 @@ Jagna();
 
 const noName = user();
 noName();
+
+// CLOSURE BEZ FUNKCJI W FUNKCJI
+
+var passed = 3;
+var addTo = function() {
+  var inner = 2;
+  return passed + inner;
+};
+console.log(`Po dodaniu ${addTo()}`); //dla tego console.log przehcowuje wartość = 3
+// console.dir(addTo);
+
+var passed = 4;
+console.log(`Po dodaniu ${addTo()}`); //dla tego przechowuje zmienioną wartość
+
+//MY DEMISE
+//tutaj wprowadź kod swój
