@@ -13,9 +13,10 @@ const addLetter = () => {
   indexText++;
   if (indexText === txt.length) clearInterval(indexTyping);
 };
+
+const indexTyping = setInterval(addLetter, time);
+
 const cursorAnimation = () => {
   spnCursor.classList.toggle("active");
 };
-
-const indexTyping = setInterval(addLetter, time);
 setInterval(cursorAnimation, 400);

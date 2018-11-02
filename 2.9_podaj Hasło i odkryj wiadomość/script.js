@@ -7,8 +7,11 @@ input.addEventListener("input", e => {
   div.textContent = "";
 
   const text = e.target.value;
+
   console.log(text);
+
   passwords.forEach((password, index) => {
+
     if (password === text) {
       div.textContent = messages[index];
       e.target.value = "";

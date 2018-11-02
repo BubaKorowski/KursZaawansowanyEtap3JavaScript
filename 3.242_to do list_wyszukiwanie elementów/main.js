@@ -13,7 +13,7 @@ const duble = arr.map(number => number * 2);
 //  forEach
 arr.forEach((number, index) => (arr[index] = number * 2));
 
-//  SEARCH
+//  SEARCH - CZYLI WYSZUKIWANIE ELEMENTÓW
 
 const input = document.querySelector("input");
 const ul = document.querySelector("ul");
