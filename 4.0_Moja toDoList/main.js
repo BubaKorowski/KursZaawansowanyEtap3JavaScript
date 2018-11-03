@@ -12,8 +12,11 @@ const addTask = e => {
   e.preventDefault();
   const titleTask = input.value;
 
-  if (titleTask === "") return;
-  //   if(titleTask === searchTask() )
+  if (titleTask === "") {
+    alert("Dodaj treść");
+    return
+  }
+
   const task = document.createElement("li");
   task.innerHTML = titleTask + "<button>Usuń</button>";
   toDoList.push(task);
