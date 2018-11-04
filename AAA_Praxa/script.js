@@ -1,42 +1,46 @@
-//  ANIMACJA PISANIA NA MASZYNIE
+const toDoList = [];
 
-// const spnTxt = document.querySelector("span");
-// const txt = ["setInterval(addLeter, time)", "Another text"];
+const form = document.querySelector("form");
+const inputAdd = document.querySelector("input.add");
+const btnAdd = document.querySelector("button.add");
+const spn = document.querySelector("h1 span");
+const ul = document.querySelector("ul");
+const liElements = document.querySelectorAll("li");
+const inputSearch = document.querySelector("input.search");
 
-// let time = 100;
-// let index = 0;
-// let letter = 0;
+const addTask = e => {
+  e.preventDefault();
+  const titleTask = inputAdd.value;
+  if (titleTask === "") {
+    alert("Enter task name");
+    return;
+  }
 
-// const addText = () => {
-//   spnTxt.textContent += txt[index][letter];
-//   letter++;
-//   if (letter === txt[index].length) {
-//     index++;
-//     if (index === txt.length) return;
-//     return setTimeout(() => {
-//       letter = 0;
-//       spnTxt.textContent = "";
-//       addText();
-//       1000;
-//     });
-//   }
-//   setTimeout(addText, time);
-// };
-// addText();
+  const task = document.createElement("li");
+  task.innerHTML = titleTask + "<button>Delete</button>";
+  toDoList.push(task);
+  renderList();
 
-// CLOSURES time counter
-
-const addCount = function() {
-  var number = 10;
-  return function() {
-    number--;
-    document.body.textContent = `counter ${number}`;
-    if (number == 0) {
-      // number = 0;
-      alert("koniec internetów");
-    }
-  };
+  ul.appendChild(task);
+  inputAdd.value = "";
+  spn.textContent = toDoList.length;
+  task.querySelector("button").addEventListener("click", removeTask);
 };
-const start = addCount();
-setInterval(start, 1000);
-// setInterval(addCount(), 1000);
+
+const renderList = () => {
+  ul.textContent = "";
+  toDoList.forEach((toDoElement, key) => {
+    toDoElement.dataset.key = key;
+    ul.appendChild(toDoElement);
+  });
+};
+
+const removeTask = e => {
+  const index = e.target.parentNode.dataset.key;
+  toDoList.splice(index, 1);
+  spn.textContent = toDoList.length;
+  inputSearch.value = "";
+  renderList();
+};
+
+form.addEventListener("submit", addTask);
