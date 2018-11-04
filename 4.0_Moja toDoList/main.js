@@ -54,11 +54,11 @@ const searchTask = e => {
   tasks.forEach(li => ul.appendChild(li));
 };
 
-const clear = () => {
+const clearSearch = () => {
   inputSearch.value = "";
   renderList();
 };
 
 form.addEventListener("submit", addTask);
 inputSearch.addEventListener("input", searchTask);
-btnClear.addEventListener("click", clear);
+btnClear.addEventListener("click", clearSearch);
