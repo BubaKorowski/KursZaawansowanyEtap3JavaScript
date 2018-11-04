@@ -12,6 +12,7 @@ const addTask = e => {
   e.preventDefault();
   const titleTask = inputAdd.value;
   if (titleTask === "") {
+    console.log("puste pole");
     alert("Enter task name");
     return;
   }
