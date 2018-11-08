@@ -7,13 +7,13 @@ const spn = document.querySelector("h1 span");
 const ul = document.querySelector("ul");
 const liElements = document.querySelectorAll("li");
 const inputSearch = document.querySelector("input.search");
+const z = document.querySelector("button.clear");
 
 const addTask = e => {
   e.preventDefault();
   const titleTask = inputAdd.value;
   if (titleTask === "") {
-    console.log("puste pole");
-    alert("Enter task name");
+    alert("Dodaj treść");
     return;
   }
 
@@ -44,4 +44,22 @@ const removeTask = e => {
   renderList();
 };
 
+const searchTask = e => {
+  const searchText = e.target.value.toLowerCase();
+  console.log(searchText);
+  let tasks = [...liElements];
+  tasks = toDoList.filter(li =>
+    li.textContent.toLowerCase().includes(searchText)
+  );
+  ul.textContent = "";
+  tasks.forEach(li => ul.appendChild(li));
+};
+const clearSearch = e => {
+  console.log("clear");
+  inputSearch.value = "";
+  renderList();
+};
+
 form.addEventListener("submit", addTask);
+inputSearch.addEventListener("input", searchTask);
+document.querySelector("button.clear").addEventListener("click", clearSearch);
