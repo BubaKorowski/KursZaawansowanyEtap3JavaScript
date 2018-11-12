@@ -136,10 +136,12 @@ function PersonFull(first, last, age, gender, interests) {
     alert("Hi! I'm " + this.name.first + ".");
   };
 }
-var Person2A = new PersonFull("Lili", "Smith", 44, "f", [
+var person2A = new PersonFull("Lili", "Smith", 44, "f", [
   "programing",
   "being rich",
   "fucking",
   "jumping",
   "Banging"
 ]);
+person2A instanceof PersonFull; //Spradzamy czy dany element jest instancją konstruktora.
+person2A instanceof Object; //Spradzamy czy dany element jest instancją Object.
