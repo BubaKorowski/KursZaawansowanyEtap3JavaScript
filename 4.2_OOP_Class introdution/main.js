@@ -63,3 +63,51 @@ class Rodzina {
     return members;
   }
 }
+
+//  KLASY - DZIEDZICZENIE(extends i super)
+
+//klasa dziedziczy po innej klasie
+//1. zbudowanie prototypu klasy dziedizczącej w oparciu o klasę po której dziedziczy (w pewnym uproszczeniu powstaje łańcuuch prototypów)
+//2. wywołanie konstruktora klasy(klas) nadrzędnej (nadrzędnych)
+
+//Słowo kluczowe extends - wskazanie klasy po której nowa klasa ma dziedziczyć
+//Słowo kluczowe super - służy do rozszerzania konstruktora nowej klasy podrzędnej o konstruktor klasy nadrzędnej
+
+class Animal {
+  constructor(age, name) {
+    this.age = age;
+    this.name = name;
+  }
+  breathe() {
+    console.log("oddycha");
+  }
+}
+
+const zebra = new Animal(2, "Mark");
+
+class Mammal extends Animal {
+  constructor(age, name, hairs) {
+    super(age, name);
+    this.hairs = hairs;
+  }
+  drinkMilk() {
+    console.log("ssaki piją mleko");
+  }
+}
+
+const ssak = new Mammal(12, "Anna", "Blond");
+ssak.breathe();
+ssak.drinkMilk();
+
+class Human extends Mammal {
+  constructor(age, name, hairs, language) {
+    super(age, name, hairs);
+    this.language = language;
+  }
+  speak() {
+    console.log("Człowiek mówi błędną polszczyzną.");
+  }
+}
+
+const newHuman = new Human(33, "Samuraj Programowania", "ciemne", "polski");
+newHuman.speak();
