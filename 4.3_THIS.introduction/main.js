@@ -195,6 +195,7 @@ class Dog {
 }
 
 const fafik = new Dog("Fafik", "brązowy");
+
 class Car {
   constructor(name, counter = 100000, year = 2000) {
     this.name = name;
