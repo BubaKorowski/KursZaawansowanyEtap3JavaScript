@@ -13,9 +13,9 @@ class Wallet {
     this.changeWallet = (value, type = "+") => {
       if (typeof value === "number" && !isNaN(value)) {
         if (type === "+") {
-          return _money + value;
+          return (_money += value), console.log(_money, value, "plus");
         } else if (type === "-") {
-          return _money - value;
+          return (_money -= value), console.log(_money, value, "minus");
         } else {
           throw new Error("Nieprawidłowy typ działania");
         }
@@ -26,4 +26,4 @@ class Wallet {
     };
   }
 }
-const wallet = new Wallet(200);
+const wallet = new Wallet(111);
