@@ -12,7 +12,7 @@ const addTask = e => {
   e.preventDefault();
   const titleTask = input.value;
 
-  if (titleTask === "") {
+  if (!input.value) {
     alert("Dodaj treść");
     return
   }

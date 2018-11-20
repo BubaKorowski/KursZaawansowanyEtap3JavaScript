@@ -53,7 +53,9 @@ const searchTask = e => {
   );
   ul.textContent = "";
   tasks.forEach(li => ul.appendChild(li));
+  console.log(toDoList)
 };
+
 const clearSearch = e => {
   console.log("clear");
   inputSearch.value = "";
