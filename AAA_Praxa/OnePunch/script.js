@@ -191,8 +191,9 @@ console.log(addSquares(2, 3));
 
 // HOISTING
 
-const birthDate = [1983, 1900, 1863, 1945];
-curentDate = 2018;
+const birthDate = [1983, 1900, 1863, 1945, 10, 20, 30];
+
+const curentDate = 2018;
 for (i = 0; i < birthDate.length; i++) {
   console.log(
     `Wiek użytkownika o numerze ${i + 1} to ` + (curentDate - birthDate[i])
